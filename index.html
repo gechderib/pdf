@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* table */
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+
+        /* padding */
+        .pad0 {
+            padding: 0px;
+        }
+
+        .pad5 {
+            padding: 5px 0px;
+        }
+
+        .pad10 {
+            padding: 10px 0px;
+        }
+
+        .pad25 {
+            padding: 16px 0px;
+        }
+
+        .pad-x-1 {
+            padding: 0px 8px;
+        }
+
+        .pad-x-2 {
+            padding: 0px 3px;
+        }
+
+        .pad-x-3 {
+            padding: 0px 30px;
+        }
+
+        .pad-obs {
+            padding-bottom: 67px;
+        }
+
+        .pad-si {
+            padding: 30px 0px;
+        }
+
+        .paddHigh3 {
+            padding-left: 55px;
+            padding-right: 55px;
+        }
+
+        /* invisible border */
+        .btm-none {
+            border-bottom: solid 1px white;
+        }
+
+        .top-none {
+
+            border-top: solid 1px white;
+        }
+
+        .right-none {
+            border-right: solid 1px white;
+        }
+
+        .left-none {
+            border-left: solid 1px white;
+        }
+
+        /* background color */
+        .bg-color-1 {
+            background-color: rgb(175, 174, 174);
+        }
+
+        .bg-color-2 {
+            background-color: rgb(226, 224, 224);
+        }
+
+        .bg-color-3 {
+            background-color: rgb(247, 246, 246);
+        }
+
+        /* text size */
+        .text-size {
+            font-size: x-small;
+        }
+
+        /* verticla text */
+        .vertical-text-1 {
+            writing-mode: vertical-lr;
+        }
+
+        .vertical-text-2 {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            /* padding: 10px 0px; */
+        }
+
+        .light-color {
+            color: rgb(216, 214, 214);
+        }
+
+        .white {
+            color: white;
+        }
+
+        .bold {
+            font-weight: 900;
+        }
+
+        /* text alignment */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .double-border {
+            border-right: solid 2px black;
+        }
+
+        .paddHigh4 {
+            padding-left: 95px;
+            padding-right: 95px;
+        }
+
+        .gray-1 {
+            color: gray;
+        }
+
+        .head-color {
+            color: rgb(14, 14, 73);
+        }
+        .footer-pad {
+            padding-right: 400px;
+            
+        }
+        .footer {
+            position: fixed;
+            background-color: white;
+            width: 98.8%;
+            z-index: 10;
+            bottom: 0;
+            padding-bottom: 10px;
+        }
+        .header {
+            top: 0;
+            padding-top: 10px;
+            position: fixed;
+            background-color: white;
+            width: 98.8%;
+            z-index: 10;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <table class="text-size text-center">
+                <tr>
+                    <th>
+                        <table>
+                            <tr>
+
+                                <td class="btm-none left-none right-none top-none" style="padding-left: 35%;"><img
+                                        src="./asset/logo.PNG" alt="icon" height="30px"></td>
+                                <td class="btm-none left-none right-none top-none head-color">Redycomercio <br>
+                                    soluciones comerciales
+                                    en la red</td>
+                            </tr>
+                        </table>
+                    </th>
+                    <th class="gray-1">
+                        Acta de inspección alimentación bellota <br> SALIDA MONTANERA
+
+                    </th>
+                    <th class="text-end gray-1">ACT_I_ IB_SA_ALM_Rev.2_220322 <br>
+                        Hora – I : _______Hora – F:_____ Pág____de______
+                    </th>
+                </tr>
+            </table>
+            <div style="height: 10px;"></div>
+
+            <table class="text-center">
+                <tr>
+                    <td class="text-start right-none btm-none">Fecha:</td>
+                    <td class="btm-none">Código acta ITACA: </td>
+                    <td class="paddHigh3 bg-color-2"></td>
+                    <td class="btm-none">Nº Acta/Informe:</td>
+                    <td class="paddHigh3 bg-color-2"></td>
+                    <td class="btm-none left-none right-none">Inspector:</td>
+                    <td class="paddHigh3 left-none btm-none"></td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="text-start btm-none">Titular:</td>
+                </tr>
+                <tr>
+                    <td class="text-start right-none">Explotación: </td>
+                    <td class="right-none"></td>
+                    <td class="right-none">Nº REGA:</td>
+                    <td class="right-none">Municipio/ Provincia:</td>
+                    <td class="right-none"></td>
+                    <td class="right-none">Coordenadas:</td>
+                    <td class="">/</td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="text-start">Justificación desviación tiempo: </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div style="height: 150px;"></div>
+
+        <table class="table1 text-size text-center">
+            <tr>
+                <th rowspan="7" class="vertical-text-2 bg-color-2 pad10">EDAD <br> IDENTIFICACIÓN, RAZA Y</th>
+
+                <th colspan="6" class="bg-color-2 pad10">Identificación lote alimentación</th>
+                <td colspan="3" rowspan="7" class="pad0">
+                    <table>
+                        <tr>
+                            <td colspan="2" class="pad10 top-none left-none bg-color-2">AA para muestrear</td>
+                            <td colspan="2" class="top-none right-none bg-color-2 pad10">Muestro <br> identificació</td>
+                        </tr>
+                        <tr>
+                            <td class="pad10 left-none bg-color-3 pad10">CENSO AA <br>VISITA <br>ANTERIOR</td>
+                            <td class="pad10"></td>
+                            <td class="bg-color-3 pad10">Nº AA <br> muestre <br> ados </td>
+                            <td class="pad5 right-none pad10"></td>
+                        </tr>
+                        <tr>
+                            <td class="pad10 left-none bg-color-3 pad10">BAJAS</td>
+                            <td class="pad10"></td>
+                            <td rowspan="2" class="btm-none bg-color-3 pad10">No <br>cumplen </td>
+                            <td class="right-none " style="padding: 17px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="btm-none left-none bg-color-3 pad10">TOTAL AA</td>
+                            <td class="btm-none light-color pad10">AA sobre los <br>que se aplica <br>el muestreo
+                            </td>
+                            <td class="right-none btm-none pad10"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="10" rowspan="7" class="pad0">
+                    <table>
+                        <tr>
+                            <td colspan="5" class="bg-color-2 pad25">Verificación de la identificación</td>
+                            <td class="bg-color-2 pad25">Fecha de nacimiento</td>
+                            <td class="bg-color-2 pad25" colspan="2">Raza</td>
+                            <td class="bg-color-2 pad25" rowspan="2">Nº AA <br> conforme <br>peso e <br> identificación
+                            </td>
+                            <td class="btm-none pad25"></td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="bg-color-3 pad25">¿Verificas el <br> 100% de las <br>identificaciones
+                                <br>ciones del <br> lote?
+                            </td>
+                            <td class="pad25">SI</td>
+                            <td class="bg-color-3 pad25">SI <br>conforme </td>
+                            <td colspan="2" class="pad25">Nº AA</td>
+                            <td class="text-start light-color btm-none">Desde:</td>
+                            <td class="bg-color-3 pad25">50%</td>
+                            <td class="pad25">18</td>
+                            <td class="pad25"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="pad25">NO</td>
+                            <td rowspan="2" class="bg-color-3 pad25">NO <br> conforme </td>
+                            <td rowspan="2" class="pad25">Nº AA</td>
+                            <td class="bg-color-3 pad25">Nueva identificación</td>
+                            <td class="btm-none pad25"></td>
+                            <td class="btm-none bg-color-3 pad25">75%</td>
+                            <td class="pad25"></td>
+                            <td rowspan="2" class="bold bg-color-2 pad25">BELLOTA</td>
+                            <td class="pad25">APTO</td>
+                        </tr>
+                        <tr>
+                            <td class="pad25"></td>
+                            <td class="text-start light-color pad25">Hasta:</td>
+                            <td class="bg-color-3 pad25">100%</td>
+                            <td class="pad10 pad25"></td>
+                            <td class="pad25">NO APTO</td>
+                        </tr>
+
+                    </table>
+                </td>
+                <th rowspan="13" class="vertical-text-1 bg-color-2 pad10">ACTA NO CONFORME</th>
+
+
+
+            </tr>
+            <tr class="bg-color-3">
+                <td colspan="2" class="pad10">Color</td>
+                <td colspan="2">Crotal ITACA</td>
+                <td colspan="2">Lote</td>
+
+
+
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="3"></td>
+                <td colspan="2" rowspan="3"></td>
+                <td colspan="2" rowspan="3"></td>
+
+
+            </tr>
+            <tr>
+
+
+            </tr>
+            <tr>
+
+
+
+
+            </tr>
+            <tr>
+                <td colspan="6" class="light-color text-start">IDENTIFICACIÓN: ID ARCHIVO MULTIM</td>
+
+            </tr>
+            <tr>
+                <td colspan="6" class="light-color text-start">UBICACIÓN LOTE: ID ARCHIVO MULT</td>
+
+
+
+            </tr>
+            <tr>
+                <td rowspan="11" class="vertical-text-2 bg-color-2">VERIFICACIONES PESO</td>
+                <td rowspan="11" class="vertical-text-2 bg-color-2">PESADA MUESTRA AA</td>
+                <td colspan="2" class="bg-color-2">Nº AA muestreados</td>
+                <td></td>
+                <td colspan="2" class="bg-color-2">ID ARCHIVO MULTIMEDIA </td>
+                <td></td>
+                <td colspan="2" class="bg-color-2">Identificación báscula</td>
+                <td colspan="6"></td>
+                <td colspan="2" class="bg-color-2">Verificación de la de la báscula </td>
+                <td colspan="2" class="bg-color-2">Cumple</td>
+
+
+            </tr>
+            <tr>
+                <td class="bg-color-3">Kilos </td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos </td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos </td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos</td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos</td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos</td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-3">Kilos</td>
+                <td class="bg-color-3 double-border">Archivo <br> Multimedia</td>
+                <td class="bg-color-2 text-start">1ª Desviación báscula</td>
+                <td></td>
+                <td>SI</td>
+                <td>NO</td>
+
+            </tr>
+            <tr>
+                <td class="btm-none light-color ">P1</td>
+                <td class="pad10 double-border"></td>
+                <td class=""></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border" rowspan="4"></td>
+                <td rowspan="4"></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td class="bg-color-2 text-start">2ª Desviación báscula </td>
+                <td class="pad5"></td>
+                <td>SI</td>
+                <td>NO</td>
+
+            </tr>
+            <tr>
+                <td class="btm-none light-color pad10">P2</td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td class="light-color">P50 </td>
+                <td class="double-border"></td>
+                <td class="bg-color-2 text-start">3ª Desviación báscula</td>
+                <td class="">.</td>
+                <td>SI</td>
+                <td>NO</td>
+
+            </tr>
+            <tr>
+                <td class="btm-none light-color pad10">P3</td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td rowspan="7" colspan="6" class="pad0">
+                    <table>
+                        <tr>
+                            <th>Tamaño del lote <br> (nº AA)</th>
+                            <th>Nº AA inspeccionados</th>
+                            <th>Nº AA mal identificados para <br> rechazar el muestreo (*)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2-15</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>16-25</td>
+                            <td>3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>26-50</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>51-90</td>
+                            <td>5</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>91-150</td>
+                            <td>8</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>152-280</td>
+                            <td>13</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>281-500</td>
+                            <td>20</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>501-1200</td>
+                            <td>32</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>≥1201</td>
+                            <td>50</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td class="btm-none light-color pad10"></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+
+
+            </tr>
+            <tr>
+                <td class="pad10"></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td class="light-color">P20 </td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+
+                <td rowspan="3" class="vertical-text-1">SI</td>
+
+            </tr>
+            <tr>
+                <td class="light-color pad10">P5</td>
+                <td class="double-border"></td>
+                <td class="light-color">P13</td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+
+
+            </tr>
+            <tr>
+                <td class="btm-none pad10"> </td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border" rowspan="2"></td>
+                <td class="btm-none"></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+
+
+            </tr>
+            <tr>
+                <td class="light-color">P8</td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="light-color">P32</td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+                <td></td>
+                <td class="double-border"></td>
+
+                <td rowspan="3" class="vertical-text-1">NO</td>
+
+            </tr>
+            <td colspan="6" class="bg-color-1"></td>
+            <td class="bg-color-3">PESO MEDIO</td>
+            <td colspan="2"></td>
+            <td class="bg-color-3">CUMPLEN </td>
+            <td>SI</td>
+            <td>NO</td>
+
+
+
+            </tr>
+            </tr>
+            <td colspan="7" class="text-start bg-color-2"> <span class="bold">VISITA ANEXA: </span> CUMPLIMENTAR EL DÍA
+                DE LA PESADA DEL 100% DE LOS
+                AA</td>
+            <td colspan="1">Nº Acta anterior:</td>
+            <td colspan="6"></td>
+            <td colspan="1">Fecha</td>
+            <td colspan="1"></td>
+            <td colspan="4" class="bg-color-1"></td>
+
+
+
+
+            </tr>
+
+
+        </table>
+
+        <table class="text-size text-center">
+            <tr>
+                <td style="width: 65%;" class="pad0">
+                    <table>
+                        <tr>
+                            <th colspan="10" class="bg-color-3">COMPROBACIÓN DIRECTA</th>
+                        </tr>
+
+                        <tr>
+                            <td class="pad25 vertical-text-2 bg-color-3 " rowspan="10">DISPONIBILIDAD DE RECURSOS
+                                NATURALES
+                            </td>
+                            <td class="pad0 bg-color-3" rowspan="3" colspan="2">Los animales <br> tienen acceso a
+                                <br>piensos
+                            </td>
+                            <td class="pad0 bg-color-3" rowspan="3" colspan="2">Cercas
+                                reservadas<br>par<br>aprovechamiento<br>posterior</td>
+                            <td class="pad0 bg-color-2" colspan="5">Zonas de aprovechamiento</td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 bg-color-3" colspan="2">Totales</td>
+                            <td class="pad0 vertical-text-2 bg-color-3" rowspan="3">Reservadas</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA</td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 light-color">Nº <br> cerca</td>
+                            <td class="pad0 light-color">Has</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0" rowspan="7">SI</td>
+                            <td class="pad0" rowspan="7">NO</td>
+                            <td class="pad0" rowspan="7">SI</td>
+                            <td class="pad0" rowspan="7">NO</td>
+                            <td class="pad0 bg-color-3" colspan="2">Reservadas</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 light-color">Nº <br> cercas</td>
+                            <td class="pad0 light-color">Has</td>
+                            <td class="pad0 vertical-text-2 bg-color-3" rowspan="3">En uso</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 bg-color-3" colspan="2">En uso </td>
+                            <td class="paddHigh4 light-color pad10">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 light-color" rowspan="2">Nº <br> cercas</td>
+                            <td class="pad0 light-color" rowspan="2">Has</td>
+                            <td class="paddHigh4 light-color"> REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 vertical-text-2 bg-color-3" rowspan="3">Aprovechadas</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 bg-color-3" colspan="2">Aprovechadas</td>
+                            <td class="paddHigh4 light-color pad10">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 light-color">Nº <br> cercas</td>
+                            <td class="pad0 light-color">Has</td>
+                            <td class="paddHigh4 light-color">REF. PARCELARIA</td>
+                            <td class="paddHigh4 light-color">ID. ARCHIVO MULTIMEDIA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 vertical-text-2 bg-color-3" rowspan="4">TACIÓN <br>SUPLEMEN </td>
+                            <td class="pad0 pad10" colspan="9">Observaciones:</td>
+                        </tr>
+                        <tr>
+                            <td class="pad0 bg-color-3" colspan="2" rowspan="3">¿El comportamiento <br>de los animales
+                                <br>indica que existe <br>suplementación?
+                            </td>
+                            <td class="pad0" rowspan="3">
+                                <p>SI</p>
+                                <hr>
+                                <p>NO</p>
+                            </td>
+                            <td class="pad0" colspan="3" rowspan="3">¿Existen indicios de la <br> suplementación en
+                                las
+                                <br> heces?
+                            </td>
+                            <td class="pad0" rowspan="3">
+                                <p>SI</p>
+                                <hr>
+                                <p>NO</p>
+                            </td>
+                            <td class="light-color">ID ARCHIVO MULTIMEDIA HECES</td>
+                            <td class="text-start" colspan="1" rowspan="3">Observaciones heces:</td>
+                        </tr>
+                        <tr>
+                            <td class="light-color">ID ARCHIVO MULTIMEDIA HECES</td>
+                        </tr>
+                        <tr>
+                            <td class="light-color">ID ARCHIVO MULTIMEDIA HECES</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="pad0" style="width: 35%;">
+                    <table>
+                        <tr>
+                            <td colspan="3" class="bg-color-3">ACCIONES CORRECTORAS</td>
+                            <td colspan="7" class="bg-color-3">RESULTADO VISITA SALIDA</td>
+                            <td rowspan="5" class="vertical-text-1 pad-x-2 bg-color-3">ACTA NO CONFORME</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" class="bg-color-3 pad-x-1 pad5">
+                                <p> ¿Es necesario <br> ajustar el número <br> de AA que <br> aprovechan la <br>
+                                    montanera?
+                                </p>
+                                <p>
+                                    ¿Es necesario <br> rebajar la <br>calificación <br>alimentación a la <br>que
+                                    optan
+                                    los <br>lote(s)? </p>
+
+                            </td>
+                            <td rowspan="2" class="">SI</td>
+                            <td rowspan="2" class="">NO</td>
+                            <td colspan="2" class="bg-color-1"></td>
+                            <td colspan="2" class="bg-color-3 pad5">Validez máxima del <br>
+                                acta para salida
+                            </td>
+                            <td colspan="2">Indicar fecha dd/mm/aa</td>
+                            <td class="bg-color-1 pad-x-3 "></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="6" class="vertical-text-2 pad-x-1 bg-color-3">Marcar la opción que corresponda</td>
+                            <td rowspan="6" class="pad-x-1"></td>
+                            <td colspan="5">Una vez superado el plazo de validez de la visita los animales son
+                                descalificados a alimentación cebo de campo
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="">SI</td>
+                            <td rowspan="2">NO</td>
+                            <td colspan="3" rowspan="2" class="text-start">Una vez finalizado el plazo de
+                                validez se realizará una nueva visita
+                                para comprobar la disponibilidad de
+                                recursos
+                            </td>
+                            <td colspan="2" class="">Fecha límite</td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pad25">dd/mm/aa</td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="bg-color-3 pad-x-1">rellenar acta de <br>descalificación de <br>AA a
+                                otra
+                                <br>alimentación?
+                            </td>
+                            <td rowspan="3" class="pad-x-1">SI</td>
+                            <td rowspan="3" class="pad-x-1">NO</td>
+                            <td rowspan="2" colspan="5" class="pad25 text-start">
+                                Se va a realizar una visita inopinada <br>
+                                En caso que el cliente ganadero no permita la realización de las visitas
+                                (inopinadas, dirimente, extraordinaria,…), Araporcei aplicará el
+                                régimen sancionador establecido en el contrato de prestación de
+                                servicios.
+
+                            </td>
+
+                            <td class="vertical-text-1 text-center pad-si">SI</td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="vertical-text-1">NO</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="pad-obs text-start">Observaciones inopinada:</td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div style="height: 80px;"></div>
+        <div class="footer">
+            <table class="text-center text-size">
+                <tr>
+                    <td rowspan="2" class="top-none left-none right-none btm-none">
+                        Fdo.: Inspector Técnico <br>
+                        <img src="./asset/sign123.PNG" alt="sign">
+                    </td>
+                    <td class="top-none btm-none right-none">Nombre / DNI <br>
+                        Fdo. Cliente/Recibí:
+                        </td>
+                    <td class="top-none btm-none">
+                        <img src="./asset/sign123.PNG" alt="sign">
+    
+                    </td>
+                    <td colspan="2" class="footer-pad text-start">OBSERVACIONES:</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="btm-none right-none">
+                        <span class="bold"> Recycomercio, S.L. </span>
+                       C/ Arquitectura, 3 Planta 2º - Modulo 1 y 2 41703 Dos Hermanas (Sevilla) – Tel. 954-00.00.00 y Fax. 954-00.00.00 Email: red@redycomercio.com
+    
+    
+                    </td>
+    
+                    
+                </tr>
+            </table>
+        </div>
+      
+
+
+    </div>
+</body>
+
+</html>
